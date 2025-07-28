@@ -11,7 +11,7 @@ enabled = true
 [project]
 name = "selenium-wire-undetected-chromedriver-lw"
 dynamic = ["version"]
-license = "GPLv3"
+license = "GPL-3.0"
 license-files = ["LICENSE"]
 dependencies = [
     "selenium-wire-lw",
