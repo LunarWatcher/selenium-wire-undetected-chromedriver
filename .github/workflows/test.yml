@@ -12,6 +12,7 @@ jobs:
       - run: printenv
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
+      - uses: browser-actions/setup-chrome@v2
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
