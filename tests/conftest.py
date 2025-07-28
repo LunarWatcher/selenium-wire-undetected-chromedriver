@@ -10,7 +10,7 @@ import pytest
 @pytest.fixture
 def chrome_options():
     options = uc.ChromeOptions()
-    # options.add_argument("--headless=new")
+    options.add_argument("--headless=new")
     options.accept_insecure_certs = True
     return options
 
