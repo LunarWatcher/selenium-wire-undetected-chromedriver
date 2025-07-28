@@ -46,11 +46,6 @@ keywords = [
     "selenium", "selenium-wire", "selenium-wire-lw"
 ]
 
-[project.optional-dependencies]
-uf = [
-    "undetected-geckodriver-lw" 
-]
-
 [project.urls]
 Homepage = "https://github.com/LunarWatcher/selenium-wire-undetected-chromedriver"
 Documentation = "https://github.com/LunarWatcher/selenium-wire-undetected-chromedriver"
