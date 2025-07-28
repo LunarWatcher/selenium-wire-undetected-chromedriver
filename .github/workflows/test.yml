@@ -1,0 +1,20 @@
+name: build
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: printenv
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: "Run tests"
+        run: |
+          pytest

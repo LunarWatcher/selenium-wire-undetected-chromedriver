@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools >= 77.0.3", "wheel", "setuptools-git-versioning>=2.0,<3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["seleniumwire_gpl*"]
+
+[tool.setuptools-git-versioning]
+enabled = true
+
+[project]
+name = "selenium-wire-undetected-chromedriver-lw"
+dynamic = ["version"]
+license = "GPLv3"
+license-files = ["LICENSE"]
+dependencies = [
+    "selenium-wire-lw",
+    "undetected_chromedriver",
+    # Required until this commit gets versioned:
+    # https://github.com/ultrafunkamsterdam/undetected-chromedriver/commit/c50b6a219f1a2de3596c7887012b05cb99714ba8
+    "setuptools"
+]
+readme = "README.md"
+
+authors = [
+    { name = "LunarWatcher", email = "oliviawolfie@pm.me" },
+]
+
+description = "selenium-wire-lw extension adding support for undetected_chromedriver"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: System :: Archiving",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+]
+keywords = [
+    "selenium", "selenium-wire", "selenium-wire-lw"
+]
+
+[project.optional-dependencies]
+uf = [
+    "undetected-geckodriver-lw" 
+]
+
+[project.urls]
+Homepage = "https://github.com/LunarWatcher/selenium-wire-undetected-chromedriver"
+Documentation = "https://github.com/LunarWatcher/selenium-wire-undetected-chromedriver"
+Repository = "https://github.com/LunarWatcher/selenium-wire-undetected-chromedriver.git"
+Issues = "https://github.com/LunarWatcher/selenium-wire-undetected-chromedriver/issues"
+Changelog = "https://github.com/LunarWatcher/selenium-wire-undetected-chromedriver/releases"
